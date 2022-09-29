@@ -18,7 +18,7 @@ object Main extends App:
   val formatter: SimpleDateFormat = SimpleDateFormat("h:mm:ss a")
   val sunriseTime: Date = formatter.parse(sunrise.as[String])
   val sunsetTime: Date = formatter.parse(sunset.as[String])
-  if Seq(sunriseTime.getHours() to sunsetTime.getHours()).contains(currentHour.toDouble) then
+  if (sunriseTime.getHours() to sunsetTime.getHours()).contains(currentHour.toDouble) then
     "gsettings set org.gnome.desktop.interface color-scheme prefer-light".!!
   else
     "gsettings set org.gnome.desktop.interface color-scheme prefer-dark".!!
