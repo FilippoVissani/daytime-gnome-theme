@@ -1,3 +1,6 @@
+//> using scala "3.2.0"
+//> using lib "com.softwaremill.sttp.client3::core:3.8.3"
+//> using lib "com.typesafe.play::play-json:2.10.0-RC7"
 
 import java.util.Calendar
 import play.api.libs.json.{Json, JsValue}
